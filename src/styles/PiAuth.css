@@ -1,0 +1,235 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a; /* Slightly lighter dark background */
+    color: #ffffff; /* Pure white text for better contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  
+  /* Authentication Container */
+  .pi-auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .auth-card {
+    background: #2d2d2d; /* Lighter card background for better visibility */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border: 1px solid #444; /* Slightly more visible border */
+    margin-bottom: 2rem;
+  }
+  
+  /* Buttons */
+  .pi-auth-button, 
+  .bet-button, 
+  .restart-button, 
+  .logout-button {
+    background: #9f6fff; /* Brighter purple for better visibility */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1.25rem 0;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pi-auth-button:hover, 
+  .bet-button:hover, 
+  .restart-button:hover {
+    background: #8652ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logout-button {
+    background: #ff5252; /* Brighter red */
+  }
+  
+  .logout-button:hover {
+    background: #ff3333;
+    transform: translateY(-2px);
+  }
+  
+  .pi-auth-button:disabled, 
+  .bet-button:disabled {
+    background: #555; /* Lighter disabled state */
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #aaa;
+  }
+  
+  /* Authentication Messages */
+  .auth-error {
+    color: #ff7070; /* Brighter red for errors */
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 6px;
+    border: 1px solid #ff5252;
+  }
+  
+  .auth-warning {
+    background: #5d3b0c; /* Brighter background */
+    border: 1px solid #ffcc66;
+    color: #ffd580; /* Brighter warning text */
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  
+  /* Betting Panel */
+  .betting-panel {
+    background: #2d2d2d; /* Lighter panel background */
+    border: 1px solid #555;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .betting-panel h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  
+  /* Input Fields */
+  /* Enhanced Input Fields for Better Number Visibility */
+.bet-input input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #777;
+    border-radius: 8px;
+    font-size: 1.25rem; /* Larger font size for numbers */
+    background: #3a3a3a;
+    color: #ffffff; /* Pure white for maximum contrast */
+    text-align: center;
+    transition: border-color 0.3s ease;
+    font-weight: 600; /* Make numbers bolder */
+    letter-spacing: 0.5px; /* Add spacing between numbers */
+    min-height: 50px; /* Ensure consistent height */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  .bet-input input:focus {
+    border-color: #9f6fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(159, 111, 255, 0.25);
+    background: #444; /* Slightly lighter background when focused */
+  }
+  
+  /* Chrome, Safari, Edge, Opera input number styling */
+  .bet-input input[type=number]::-webkit-inner-spin-button,
+  .bet-input input[type=number]::-webkit-outer-spin-button {
+    opacity: 1; /* Make the spin buttons visible */
+    height: 30px; /* Taller spin buttons */
+  }
+  
+  /* Firefox input number styling */
+  .bet-input input[type=number] {
+    -moz-appearance: textfield; /* Remove default styling */
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #9f6fff;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8652ff;
+  }
+  
+  /* Game Info */
+  .bet-info, 
+  .user-info {
+    background: #383838;
+    color: #b388ff; /* Brighter purple for info text */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #555;
+  }
+  
+  /* Winner Panel */
+  .winner-panel {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #383838;
+    border-radius: 12px;
+    border: 1px solid #555;
+  }
+  
+  .winner-text {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #b388ff; /* Brighter color */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Button Container */
+  .button-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 550px) {
+    .bet-input {
+      flex-direction: column;
+    }
+    
+    .auth-card,
+    .betting-panel {
+      padding: 1.5rem;
+    }
+    
+    .pi-auth-container {
+      padding: 1rem;
+    }
+  }
